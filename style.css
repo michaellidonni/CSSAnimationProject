@@ -94,7 +94,7 @@ body {
 #spooky #body #mouth:before {
     content: ' ';
     display: block;
-    background: #fff;
+    background: gold;
     margin-left: 20px;
     width: 10px;
     height: 10px;
@@ -214,4 +214,48 @@ a {
     width: 130%;
     background: #222;
   }
+
+  .monocle {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid currentcolor;
+    top: 35%;
+    left: 20%;
+  }
+  
+  .monocle::before {
+    content: "";
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to right, lightgray, lightcyan);
+  }
+
+  .line {
+    position: absolute;
+    background-color: black;
+    top: 45%;
+    left: 18%;
+    height: 100px;
+    width: 3px;
+  }
+  
+  .line::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 5px;
+    border-radius: 10% 65% 5% 70%;
+    background-color: darkgray;
+    transform: rotate(10deg);
+    transform-origin: right 1px;
+  }
+  
+  
+  
   
