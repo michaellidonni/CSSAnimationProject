@@ -41,6 +41,7 @@ body {
     border-radius: 70%/130%;
     border-bottom: 0.5em solid #a14907;
     border-top: 0.5em solid #a14907;
+    z-index: -2;
   }
 
   .pumpkin .texture:after {
@@ -54,6 +55,7 @@ body {
     border-radius: 70%/130%;
     border-bottom: 0.5em solid #a14907;
     border-top: 0.5em solid #a14907;
+    z-index: -2;
   }
 
   .pumpkin .root {
@@ -75,6 +77,8 @@ body {
     height: 0;
     border-top: 0.8em solid transparent;
     top: 2.8em;
+    -webkit-animation: rotate-center 1s linear infinite both;
+    animation: rotate-center 1s linear infinite both;
   }
 
   .pumpkin .eye.right {
@@ -88,9 +92,30 @@ body {
     left: 3.7em;
     transform: rotate(-30deg);
     border-bottom: 2.1em solid transparent;
-    border-right: 2.4em solid #401d03;
+    border-right: 2.4em solid #401d03; 
   }
 
+  @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
   .pumpkin .mouth {
     width: 4em;
     height: 2em;
@@ -216,3 +241,42 @@ body {
       text-decoration: none;
   }
   
+  .hat:after {
+    content:"";
+    position: absolute;
+    width: 96%;
+    top: -68%;
+    left: 2%;
+    height: 123%;
+    background: #705a41;
+    transform: rotate(-4deg) rotateX(76deg);
+    border-radius: 50%;
+    border:2px solid #222;
+    box-sizing: border-box;
+    z-index: -1;
+}
+.hat:before {
+    content:"";
+    width: 58%;
+    top: -60%;
+    height: 49%;
+    position: absolute;
+    background: 
+      radial-gradient(100% 100% at 0 47%,#0000 30%,#0004),
+      radial-gradient(74% 100% at 50% 100%,#811e2f 98%,#222,#0000) bottom/100% 46%,#967f56;
+    left: 50%;
+    background-repeat: no-repeat;
+    transform: translate(-51%) rotate(-3deg);
+    border-radius: 50% 50% 0 0/69% 69% 0 0;
+    border: 1px solid #222;
+}
+
+.tounge {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  background: #F392C9;
+  border-radius: 10% 10% 50% 50%;
+  bottom: -1%;
+  left: 45%;
+}
